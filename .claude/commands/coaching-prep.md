@@ -1,10 +1,10 @@
 Read context/mental-model.md from this vault.
 
-Ask me who the 1:1 or coaching conversation is with.
+Ask me: "Who is this 1:1 with?"
 
-Then read their hub page from My Team/[Name].md or Stakeholders/[Name].md, and any recent meeting notes from the last 2-4 weeks that involved them.
+After I answer, read their hub page from My Team/[Name].md or Stakeholders/[Name].md. Then read any meeting notes from Meeting Notes/ from the last 2-4 weeks that involve this person.
 
-Prepare a cheat sheet for the conversation — I want to skip the catch-up phase and go straight to substance. Output in chat:
+Prepare a cheat sheet for the conversation — output in chat:
 
 **Context in 30 Seconds**
 [Who is this person, what do they own, what's their current situation]
@@ -19,7 +19,7 @@ Prepare a cheat sheet for the conversation — I want to skip the catch-up phase
 [What have they done well recently that I should acknowledge?]
 
 **Coaching Themes**
-[What are we working on together? What growth areas are relevant right now?]
+[What are we working on together? What growth areas are relevant now?]
 
 **Suggested Questions**
 [3-5 questions that go deeper than status updates — aim for questions that reveal how they think, not just what they did]

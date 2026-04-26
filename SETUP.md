@@ -1,130 +1,199 @@
-# Setup Guide
+. # Setup Guide
 
 ---
 
-## Step 1: Install Obsidian
+## Overview
 
-1. Download from [obsidian.md](https://obsidian.md) — free
-2. Install and open it
-3. Choose "Open folder as vault" and select this repo folder
+Two things need to happen before the system is useful:
 
----
+1. **Install the tools** — Obsidian + Templater plugin (15 minutes)
+2. **Run the setup interview** — fills in your personal context files (1-2 hours)
 
-## Step 2: Install Templater Plugin
-
-1. In Obsidian: Settings (gear icon) → Community Plugins
-2. Turn off Safe Mode if prompted
-3. Click Browse → search "Templater" → Install → Enable
-4. Go to Settings → Templater → set "Template folder location" to `Templates`
-
-That's the only required plugin.
+After that, the system runs itself through daily habits.
 
 ---
 
-## Step 3: Set Up Vault Sync (if using two devices)
+## Part 1 — Install the Tools
 
-See [reference/vault-sync.md](reference/vault-sync.md) for options.
+### Step 1: Install Obsidian
 
-**Quickest path (Mac to Mac):** Move the vault folder into iCloud Drive. It will appear on your second Mac automatically.
+Download from [obsidian.md](https://obsidian.md) — free.
+
+Open Obsidian → choose **Open folder as vault** → select this repo folder.
+
+### Step 2: Install the Templater Plugin
+
+Templater lets you create notes from templates with auto-filled dates.
+
+1. In Obsidian: **Settings → Community Plugins**
+2. Disable Safe Mode if prompted
+3. Click **Browse** → search "Templater" → Install → Enable
+4. Go to **Settings → Templater** → set "Template folder location" to `Templates`
+
+That is the only required plugin. Everything else is optional.
 
 ---
 
-## Step 4: Run the Setup Interview
+## Part 2 — Run the Setup Interview
 
-This is the most important step. The quality of your context files determines the quality of every AI workflow.
+This is the most important step. The interview generates your personal context files — without them, every AI workflow produces generic output.
 
-1. Open `setup/interview-prompt.md`
+### How to run it
+
+1. Open `setup/interview-prompt.md` in Obsidian or any text editor
 2. Copy everything below the `---` line
 3. Paste into a **new** Claude or Gemini conversation
 4. Follow the interview — answer honestly and in depth
-5. The AI will generate your `context/mental-model.md` and `context/taxonomy.md` at the end
-6. Save the output into those files
 
-**Time investment:** 1-2 hours. This is worth it. Shallow input → shallow system.
+**Time:** 1-2 hours. This investment pays back in every workflow you run after.
 
-**Pausing:** If you need to stop, say "let's pause" to the AI. When you return, say "let's continue" — the AI reads the draft files in `setup/` to restore context.
+**Pausing:** If you need to stop, say "let's pause" — the AI saves draft files. When you return, say "let's continue" and it will pick up from where you left off.
 
-**Examples:** See `examples/` for what filled context files look like for different roles.
+### What the interview generates
 
----
+At the end, the AI will produce:
 
-## Step 5: Populate Goals.md
+| File | Where to save it |
+|---|---|
+| `mental-model.md` | `context/mental-model.md` |
+| `taxonomy.md` | `context/taxonomy.md` |
+| `Goals.md` | `Goals.md` (root) |
+| Hub pages for your team | `My Team/[Name].md` |
+| Hub pages for stakeholders | `Stakeholders/[Name].md` |
+| Hub pages for programs | `Programs/[Name].md` |
 
-After the interview, the AI will generate a `Goals.md` for you. Save it to the root of the vault. Review and adjust — this is your source of truth for every reflection and weekly report.
+Copy each generated file and paste it into the corresponding location in your vault.
 
----
-
-## Step 6: Create Your First Notes
-
-Create a hub page for each key person and program the AI identified during the interview:
-
-1. In Obsidian, create a new note in `My Team/` or `Stakeholders/` for each person
-2. Use the Hub Person template: click the Templater icon → select "Hub Person"
-3. Do the same in `Programs/` for each initiative
-
-You don't need perfect hub pages — stubs are fine. They grow as you use the system.
+**Examples:** See `examples/` for what filled context files look like for three roles — developer, manager, and QA engineer.
 
 ---
 
-## Step 7: First Week Ritual
+## Part 3 — First Week
 
-**Day 1:**
-- Run `/reflect` at the end of the day (use `prompts/reflect.md`)
-- Run `/handoff` before stopping
+### Day 1
 
-**After every meeting:**
-- Take raw notes in a new note using the Meeting template
-- Run `/meeting` within 1 hour while context is fresh
+- Run `/reflect` at the end of the day (or use `prompts/reflect.md`)
+- Run `/handoff` before you stop working
 
-**Friday:**
+### After every meeting
+
+- Take rough notes in a new note using the Meeting template (Templater icon → Meeting)
+- Run `/meeting` within 1 hour while the context is still fresh
+
+### Friday
+
 - Run `/weekly-report`
 
-**After 2-3 weeks:**
-- Review your `context/mental-model.md` — does it still reflect how you actually work?
-- Update it based on what the AI gets wrong or right
+### After 2-3 weeks
+
+Review `context/mental-model.md`. Update anything the AI has been getting wrong. The system improves as the context improves.
 
 ---
 
-## Using Workflows
+## Part 4 — Two-Laptop Setup
 
-### Copy-paste method (works with Claude or Gemini, any device)
+The vault has two separate layers that sync differently:
 
-1. Open the relevant file in `prompts/` (e.g., `prompts/reflect.md`)
-2. Follow the "What to gather" section — copy the vault files it asks for
-3. Paste the prompt + gathered context into a Claude or Gemini chat
-4. Save the output to the location at the bottom of the prompt file
+| Layer | What it contains | How it syncs |
+|---|---|---|
+| **Scaffold** | Commands, templates, prompts, examples | Git (`git pull`) |
+| **Personal content** | Reflections, Meeting Notes, Goals, Docs, etc. | iCloud or Obsidian Sync |
 
-### Claude Code / Gemini CLI method
+### Setting up the second laptop
 
-If you use [Claude Code](https://claude.ai/code) or [Gemini CLI](https://github.com/google-gemini/gemini-cli) with this folder open as the workspace, slash commands work directly:
+1. Clone the repo:
+   ```
+   git clone git@github.com:mednartem/personal-os.git
+   ```
+2. Open the folder as a vault in Obsidian
+3. Install Templater (same as Step 2 above)
+4. Set up iCloud or Obsidian Sync to bring over your personal content (see below)
+
+You do **not** need to run the setup interview again — your context files sync from the first laptop.
+
+### Syncing personal content between laptops
+
+**Option 1: iCloud Drive (recommended for Mac-to-Mac)**
+
+Move your vault folder into iCloud Drive. It appears on your second Mac automatically. Free, no extra software.
+
+Caveat: sync is not instant — allow 30-60 seconds. If you edit on both machines simultaneously, iCloud may create conflict copies — resolve manually.
+
+**Option 2: Obsidian Sync**
+
+$8/month. Works cross-platform, end-to-end encrypted, handles conflicts better than iCloud. Worth it if you use Windows, iOS, or need version history.
+
+**Option 3: Git (private repo)**
+
+Fork this repo to a private GitHub repository. Track your personal content by removing the gitignore entries for the files you want to version. Use the Obsidian Git plugin to auto-commit and push.
+
+Full comparison: [reference/vault-sync.md](reference/vault-sync.md)
+
+---
+
+## Part 5 — Using Workflows
+
+Every workflow is available two ways:
+
+### With Claude Code or Gemini CLI (recommended)
+
+If you have [Claude Code](https://claude.ai/code) or [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed and this folder open as your workspace, slash commands work directly — no copy-paste:
 
 ```
 /reflect
 /meeting
-/handoff
-/resume
 /weekly-report
 ```
 
-The AI reads your vault files automatically — no copy-paste needed. Commands are in `.claude/commands/` (Claude Code) and `.gemini/commands/` (Gemini CLI). Project context is loaded automatically from `CLAUDE.md` / `GEMINI.md`.
+The AI reads your vault files automatically. Commands are in `.claude/commands/` and `.gemini/commands/`.
+
+### With Claude or Gemini (copy-paste, works anywhere)
+
+1. Open the relevant file in `prompts/` (e.g., `prompts/reflect.md`)
+2. Follow the "What to gather" section — copy the vault files it asks for
+3. Paste the prompt + your context into a new Claude or Gemini chat
+4. Save the output to the location shown at the bottom of the prompt file
 
 ---
 
-## Frequently Asked Questions
+## Workflow Quick Reference
+
+| Command | When to use | Output |
+|---|---|---|
+| `/reflect` | End of every workday | `Reflections/Daily/` |
+| `/meeting` | Within 1 hour of a meeting | `Meeting Notes/` |
+| `/handoff` | Before stopping work | `Handoffs/` |
+| `/resume` | Start of a work session | Chat |
+| `/weekly-report` | Friday | `Reflections/Weekly/` |
+| `/monthly-synthesis` | Last day of the month | `Reflections/Monthly/` |
+| `/annual-review` | End of year | `Reflections/Annual/` |
+| `/doc` | When you receive a proposal or design doc | `Docs/` |
+| `/follow-up-email` | Within 2 hours of a meeting | Chat (copy to email) |
+| `/follow-up-meeting` | After a meeting that needs a follow-up | Chat (copy to calendar) |
+| `/review-doc` | When asked to review someone's document | `Docs/` |
+| `/coaching-prep` | 10-15 min before a 1:1 | Chat |
+| `/forte` | Before performance review season | `Docs/` |
+
+---
+
+## FAQ
 
 **Do I need to use every workflow?**
 No. Start with `/reflect`, `/meeting`, and `/handoff`. Add others when you feel the need.
 
 **What if the AI output doesn't match my voice?**
-Update the Writing Style section in `context/mental-model.md`. Be more specific about what you want and don't want.
+Update the Writing Style section in `context/mental-model.md`. Be specific about what you want and don't want.
 
 **How often should I update my mental-model.md?**
-When something significant changes: new goals, new role, major feedback from a review. At minimum, review it monthly.
-
-**Can I use this with other AI tools?**
-Yes. The prompts are plain text — they work with any AI that accepts text input.
+When something significant changes: new role, new goals, major feedback from a review. At minimum, review it monthly.
 
 **What goes in Tasks.md vs. hub pages vs. meeting notes?**
-- `Tasks.md` — your active personal to-do list (short)
-- Hub pages — ongoing context for a person or program (accumulated)
-- Meeting notes — specific meetings (timestamped, linked from hub pages)
+- `Tasks.md` — your short active to-do list (keep it under one screen)
+- Hub pages — ongoing context for a person or program (grows over time)
+- Meeting notes — specific meetings, timestamped, linked from hub pages
+
+**Can I use this with ChatGPT or other AI tools?**
+Yes. The prompts in `prompts/` are plain text and work with any AI that accepts text input. The slash commands (`.claude/commands/`, `.gemini/commands/`) are specific to Claude Code and Gemini CLI.
+
+**The AI keeps getting something wrong about me.**
+That means `context/mental-model.md` needs updating. The AI only knows what's in that file — it has no memory between sessions.

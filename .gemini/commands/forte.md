@@ -4,12 +4,9 @@ Ask me:
 1. What time period does this review cover? (e.g., "Jan–Jun 2025")
 2. Do you have your company's review template or criteria? If so, paste it.
 
-Then ask me to paste a representative sample of notes from the review period:
-- 3-5 weekly reports from Reflections/Weekly/
-- 3-5 significant meeting notes from Meeting Notes/
-- Any key docs from Docs/
+After I answer, read all weekly reports from Reflections/Weekly/ and meeting notes from Meeting Notes/ that fall within the review period.
 
-After I provide them, write a high-quality performance self-assessment grounded in specific examples. Write it to Docs/forte-[YYYY].md:
+Write a high-quality performance self-assessment grounded in specific examples. Write it to Docs/forte-[YYYY].md:
 
 ```markdown
 ---

@@ -1,11 +1,13 @@
-Ask me which meeting note to use, or ask me to paste the meeting note.
+Ask me: "Which meeting? Give me a date or part of the title and I'll find the note."
 
-Optionally ask about my availability for the next 2 weeks (or I can describe it — e.g., "free most mornings, busy Thursday").
+After I answer, find and read the matching file from Meeting Notes/.
+
+Then ask: "Any availability constraints I should know about?" (optional — I can skip this)
 
 Based on the meeting note:
 
-1. Identify what follow-up was agreed to and what needs to be discussed next time
-2. Suggest a meeting duration (default 30 min unless context suggests otherwise)
+1. Identify what follow-up was agreed to and what needs to be discussed next
+2. Suggest a meeting duration (default 30 min unless context says otherwise)
 3. Draft the calendar invite:
 
 ```
@@ -22,6 +24,6 @@ Context:
 [1-2 sentences linking this to the previous meeting]
 ```
 
-If I provided availability, suggest 2-3 specific time options. If not, note that I need to check my calendar.
+If I gave availability constraints, suggest 2-3 time options. Otherwise note that I need to check my calendar.
 
 Output in chat — copy into your calendar invite.
