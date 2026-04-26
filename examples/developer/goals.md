@@ -5,12 +5,18 @@ updated: 2025-01-15
 
 # Goals
 
-## Annual Goals
+## Work Goals
 
 1. Ship auth service v2 — 100% user migration by Q3
 2. Reduce p99 API latency below 200ms
 3. Become go-to person for distributed systems design on the team
 4. Mentor Alex to independently lead a project
+
+## Personal Goals
+
+1. Run a half marathon by October
+2. Read 12 books this year — one per month
+3. Spend less time context-switching on evenings — protect at least 3 evenings a week
 
 ## Quarterly Focus
 

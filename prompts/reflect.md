@@ -27,7 +27,7 @@
 
 You are helping me with my daily strategic reflection. Using the context above, guide me through the following:
 
-1. **Time allocation check** — Based on my calendar today, which of my annual goals did this work advance? Which goals got no attention? Flag if a goal is being consistently starved.
+1. **Time allocation check** — Based on my calendar today, which of my goals (work and personal) did this work advance? Which goals got no attention? Flag if a goal is being consistently starved.
 
 2. **Alignment question** — Was today's work strategic or reactive? Be direct.
 

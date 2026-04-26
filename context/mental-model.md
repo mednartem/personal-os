@@ -16,7 +16,7 @@ updated: YYYY-MM-DD
 **Type of work:** <!-- IC / Manager / Hybrid -->
 **Organization type:** <!-- startup / scaleup / big tech / agency / etc. -->
 
-## Annual Goals
+## Goals
 
 <!-- Paste from Goals.md -->
 

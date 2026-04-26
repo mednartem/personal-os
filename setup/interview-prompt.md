@@ -36,7 +36,8 @@ Work through these in order. Ask the questions, listen, probe deeper where it's 
 
 1. What is your current role and level? What kind of organization are you in?
 2. Are you an individual contributor, a manager, or somewhere in between?
-3. What are your 3-5 most important goals for this year — professional and personal?
+3. What are your 3-5 most important **work** goals for this year?
+3b. What are your 3-5 most important **personal** goals for this year? (health, relationships, side projects, learning — anything outside work that genuinely matters to you)
 4. What does success look like in 6 months? In 12 months?
 5. What are you trying to get better at personally right now?
 6. What would you work on if you had 20% more time?

@@ -5,12 +5,18 @@ updated: 2025-01-15
 
 # Goals
 
-## Annual Goals
+## Work Goals
 
 1. Grow team from 7 to 10 — 3 hires, all productive by Q4
 2. Deliver Q3 roadmap — no slippage on top 3 commitments
 3. Develop Priya and Marcus to senior level
 4. Reduce team oncall burden by 40%
+
+## Personal Goals
+
+1. Be more present with family — no laptop after 7pm on weekdays
+2. Get back to regular exercise — 3x per week, non-negotiable
+3. Finish the leadership course I started in January
 
 ## Quarterly Focus
 

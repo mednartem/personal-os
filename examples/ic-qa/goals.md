@@ -5,12 +5,18 @@ updated: 2025-01-15
 
 # Goals
 
-## Annual Goals
+## Work Goals
 
 1. Automate 80% of regression suite by Q3 (from 35% today)
 2. Reduce release cycle from 3 weeks to 1 week
 3. Establish quality culture — developers own quality, QA enables it
 4. Test strategy document adopted across all 3 product teams
+
+## Personal Goals
+
+1. Launch a small side project — something shipped and used by at least 10 people
+2. Improve sleep consistency — in bed by 11pm at least 5 nights a week
+3. Take one proper holiday this year, fully offline
 
 ## Quarterly Focus
 
