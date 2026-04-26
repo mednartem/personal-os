@@ -7,7 +7,13 @@ updated: YYYY-MM-DD
 
 > Copy this file to start your personal version. Run the setup interview to fill it in.
 
-## Annual Goals
+## Work Goals
+
+1. 
+2. 
+3. 
+
+## Personal Goals
 
 1. 
 2. 
