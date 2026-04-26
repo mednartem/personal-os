@@ -1,0 +1,34 @@
+# Personal vault content — track folder structure (.gitkeep), ignore note content
+Meeting Notes/*.md
+Docs/*.md
+My Team/*.md
+Stakeholders/*.md
+Programs/*.md
+Handoffs/*.md
+Reflections/**/*.md
+
+# Obsidian internals
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+.trash/
+
+# Setup drafts (contain personal interview answers)
+setup/interview-log.md
+setup/goals-draft.md
+setup/mental-model-draft.md
+setup/writing-style-draft.md
+setup/org-context-draft.md
+
+# Dev artifacts
+plan.md
+
+# IDE
+.idea/
+
+# Gemini CLI internals (keep .gemini/commands/ tracked)
+.gemini/*.json
+
+# OS
+.DS_Store
